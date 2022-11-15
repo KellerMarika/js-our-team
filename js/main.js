@@ -30,13 +30,13 @@ const team = [];
 
 const bgColor = [
     "text-bg-primary"
-    
+
     , "text-bg-danger"
     , "text-bg-secondary"
     , "text-bg-warning"
     , "text-bg-dark"
     , "text-bg-info"
- 
+
 ]
 
 i = 0
@@ -54,46 +54,43 @@ console.log(team);
 
 //creo la row contenitore
 const cardsContainer_El = createElement("div", "card-container", "row");
+//la appendo al mainContainer
 mainContainer.append(cardsContainer_El);
 
 //ciclo
 while (i < team.length) {
 
-    //creo card contenitore
+   /*  struttura:
+     row
+       col
+         card 
+           cheader-name
+           cimg -url
+           cbody
+             h5- role   
+
+
+ */
     const colCard_El = createElement("div", "col", "col-4");
-    console.log(colCard_El);
-
-
-    const card_El = createElement("div", "card", bgColor[i]);
-    console.log(card_El);
-
-
-    const cardHeader_El = createElement("div", "card-header", "role");
-    console.log(cardHeader_El);
-    //creo card img (src=url, alt=nome + ruolo, class= card- img-top);
-    const cardImg_El = createImage(team[i].urlImg, team[i].name + " " + team[i].role, "card-img-top");
-    console.log(cardImg_El);
-
-    const cardBody_El = createElement("div", "card-body", "n");
-    const cardName_El = createElement("h5", "card-title", "name")
-
-    console.log(cardName_El);
-
-
-    cardHeader_El.append(team[i].role)
-    card_El.append(cardHeader_El);
-
-
-    card_El.append(cardImg_El);
-
-    cardName_El.append(team[i].name)
-    cardBody_El.append(cardName_El);
-    card_El.append(cardBody_El);
-
-
-    colCard_El.append(card_El);
     cardsContainer_El.append(colCard_El);
 
+    const card_El = createElement("div", "card", bgColor[i]);
+    colCard_El.append(card_El);
+
+    const cardHeader_El = createElement("div", "card-header", "name");
+    cardHeader_El.append(team[i].name);
+    card_El.append(cardHeader_El);
+
+    //creo card img (src=url, alt=nome + ruolo, class= card- img-top);
+    const cardImg_El = createImage(team[i].urlImg, team[i].name + " " + team[i].role, "card-img-top");
+    card_El.append(cardImg_El);
+
+    const cardBody_El = createElement("div", "card-body", "n");
+    card_El.append(cardBody_El);
+
+    const cardRole_El = createElement("h5", "card-title", "role");
+    cardRole_El.append(team[i].role);
+    cardBody_El.append(cardRole_El);
 
     i++
 }
