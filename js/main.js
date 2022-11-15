@@ -82,7 +82,7 @@ while (i < team.length) {
     card_El.append(cardHeader_El);
 
     //creo card img (src=url, alt=nome + ruolo, class= card- img-top);
-    const cardImg_El = createImage(team[i].urlImg, team[i].name + " " + team[i].role, "card-img-top");
+    const cardImg_El = createImage(team[i].urlImg, team[i].name + " " + team[i].role, "card-img");
     card_El.append(cardImg_El);
 
     const cardBody_El = createElement("div", "card-body", "n");

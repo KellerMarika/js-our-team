@@ -1,6 +1,22 @@
+
+body{
+background-color: azure;
+}
+
+
+#main-container{
+    padding-top: 200px;
+}
+
+.title{
+font-size: 4rem;
+
+}
+
 .card-container.row{
+    margin:0 100px
 }
 
 .col{
-    padding: 1rem;
+    padding: 1rem ;
 }
