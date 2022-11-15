@@ -23,10 +23,29 @@ stampo contenitore
 */
 
 
+//avrei voluto fosse generica e decidere il nome delle classi,___________ dopo se avanza tempo smanetto 
+const team = [];
 
+function generateTeamMember_Obj(name, role, urlImg) {
 
+    const teamMember_Obj = {
+        name: name,
+        role: role,
+        urlImg: urlImg
+    }
+    return teamMember_Obj
+}
 
+//console.log(generateTeamMember_Obj("a", "b", "c"));
+// _______________________________________________________________________devo controllare se ci vogliono altri apici
+team.push(generateTeamMember_Obj("Wayne Barnett","Founder & CEO","wayne-barnett-founder-ceo.jpg"));
+team.push(generateTeamMember_Obj("Angela Caroll","Chief Editor","angela-caroll-chief-editor.jpg"));
+team.push(generateTeamMember_Obj("Walter Gordon","Office Manager","walter-gordon-office-manager.jpg"));
+team.push(generateTeamMember_Obj("Angela Lopez","Social Media Manager","angela-lopez-social-media-manager.jpg"));
+team.push(generateTeamMember_Obj("Scott Estrada","Developer","scott-estrada-developer.jpg"));
+team.push(generateTeamMember_Obj("Barbara Ramos","Graphic Designer","barbara-ramos-graphic-designer.jpg"));
 
+console.log(team)
 
 
 
